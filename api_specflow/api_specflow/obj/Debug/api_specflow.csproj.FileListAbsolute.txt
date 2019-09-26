@@ -26,3 +26,4 @@ C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Deb
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.dll
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.pdb
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.csprojAssemblyReference.cache
+C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\api_specflow.dll.config
