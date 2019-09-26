@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using RestSharp;
 using System;
 
 namespace api_specflow
@@ -9,6 +10,13 @@ namespace api_specflow
         [Test]
         public void TestMethod1()
         {
+            var client = new RestClient("http://localhost:3000/");
+
+            var request = new RestRequest("products/{productid}", Method.GET);
+            request.AddUrlSegment("productid", 1);
+
+            var content = client.Execute(request).Content;
+
         }
     }
 }

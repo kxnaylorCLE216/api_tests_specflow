@@ -6,7 +6,7 @@
       "cost": 184.99,
       "quantity": 1000,
       "locationId" : 1,
-      "familyId" : 1
+      "groupId" : 1
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "cost": 259.99,
       "quantity": 2000,
       "locationId" : 1,
-      "familyId" : 2
+      "groupId" : 2
     },   
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "cost": 1.99,
       "quantity": 3000,
       "locationId" : 3,
-      "familyId" : 2     
+      "groupId" : 2     
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "cost": 12.78,
       "quantity": 4000,
       "locationId" : 2,
-      "familyId" : 3
+      "groupId" : 3
     }
   ],
   "locations":[
@@ -47,18 +47,18 @@
       "name": "Location003"
     }
   ],
-  "families":[
+  "groups":[
     {
       "id": 1,
-      "name": "FM001"
+      "name": "G001"
     },
     {
       "id": 2,
-      "name": "FM002"
+      "name": "G002"
     },
     {
       "id": 3,
-      "name": "FM003"
+      "name": "G003"
     }
   ],
   "transactions":[
