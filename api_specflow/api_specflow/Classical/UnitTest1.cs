@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using RestSharp;
-using System;
 
 namespace api_specflow
 {
@@ -16,7 +15,6 @@ namespace api_specflow
             request.AddUrlSegment("productid", 1);
 
             var content = client.Execute(request).Content;
-
         }
     }
 }
