@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Newtonsoft.Json.Linq;
+using NUnit.Framework;
 using RestSharp;
 using RestSharp.Serialization.Json;
 using System.Collections.Generic;
@@ -18,34 +19,28 @@ namespace api_specflow
 
             var response = client.Execute(request);
 
-            var deserialize = new JsonDeserializer();
-            var output = deserialize.Deserialize<Dictionary<string, string>>(response);
+            JObject obs = JObject.Parse(response.Content);
 
-            var name = output["name"];
-
-            Assert.That(name,
+            Assert.That(obs["name"].ToString(),
                 Is.EqualTo("Dyson Ball Animal Upright Vacuum"), "That is the wrong name");
-
         }
-
 
         [Test]
         public void PostWithAnoymousBody()
         {
             var client = new RestClient("http://localhost:3000/");
 
-            var request = new RestRequest("products/{productid}", Method.GET);
-            request.AddUrlSegment("productid", 1);
+            var request = new RestRequest("products/", Method.POST);
+
+            request.AddJsonBody(new { name = "RockDove", cost = "19.99", quantity = 1000, locationId = 3, groupId = 1 });
 
             var response = client.Execute(request);
 
             var deserialize = new JsonDeserializer();
             var output = deserialize.Deserialize<Dictionary<string, string>>(response);
+            var result = output["cost"];
 
-            var name = output["name"];
-
-            Assert.That(name, 
-                Is.EqualTo("Dyson Ball Animal Upright Vacuum"), "That is the wrong name");
+            Assert.That(result, Is.EqualTo("19.99"), "The Cost is not correct");
 
         }
     }
