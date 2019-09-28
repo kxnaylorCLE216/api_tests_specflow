@@ -1,6 +1,6 @@
 ﻿namespace api_specflow.Model
 {
-    internal class Products
+    public class Products
     {
         public int id { get; set; }
         public string name { get; set; }

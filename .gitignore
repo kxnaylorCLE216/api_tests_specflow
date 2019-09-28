@@ -410,3 +410,6 @@ api_specflow/api_specflow/obj/Debug/api_specflow.dll
 api_specflow/api_specflow/bin/Debug/nunit_random_seed.tmp
 api_specflow/api_specflow/bin/Debug/api_specflow.pdb
 api_specflow/api_specflow/bin/Debug/api_specflow.dll
+*.dll
+*.ide
+*.dll

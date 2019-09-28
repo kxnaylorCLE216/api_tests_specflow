@@ -1,11 +1,9 @@
 ﻿using api_specflow.Model;
-using Newtonsoft.Json.Linq;
+using api_specflow.Utilities;
 using NUnit.Framework;
 using RestSharp;
 using RestSharp.Serialization.Json;
-using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace api_specflow
 {
@@ -29,10 +27,9 @@ namespace api_specflow
 
             var response = client.Execute(request);
 
-            JObject obs = JObject.Parse(response.Content);
+            string name = response.GetRespnseObhect("name");
 
-            Assert.That(obs["name"].ToString(),
-                Is.EqualTo("Dyson Ball Animal Upright Vacuum"), "That is the wrong name");
+            Assert.That(name, Is.EqualTo("Dyson Ball Animal Upright Vacuum"), "That is the wrong name");
         }
 
         [Test]
@@ -51,9 +48,7 @@ namespace api_specflow
 
             var response = client.Execute(request);
 
-            var deserialize = new JsonDeserializer();
-            var output = deserialize.Deserialize<Dictionary<string, string>>(response);
-            var result = output["cost"];
+            var result = response.DeserializeResponse()["cost"];
 
             Assert.That(result, Is.EqualTo("19.99"), "The Cost is not correct");
         }
@@ -101,27 +96,9 @@ namespace api_specflow
 
             request.AddJsonBody(products);
 
-            var result = ExecuteAsyncRequest<Products>(client, request).GetAwaiter().GetResult();
+            var result = client.ExecuteAsyncRequest<Products>(request).GetAwaiter().GetResult();
 
             Assert.That(result.Data.cost, Is.EqualTo(16.45), "The Cost is not correct");
-        }
-
-        private async Task<IRestResponse<T>> ExecuteAsyncRequest<T>(RestClient client, IRestRequest request) where T : class, new()
-        {
-            var taskCompletionSource = new TaskCompletionSource<IRestResponse<T>>();
-
-            client.ExecuteAsync<T>(request, restResponse =>
-            {
-                if (restResponse.ErrorException != null)
-                {
-                    const string message = "Error retrieving response.";
-                    throw new ApplicationException(message, restResponse.ErrorException);
-                }
-
-                taskCompletionSource.SetResult(restResponse);
-            });
-
-            return await taskCompletionSource.Task;
         }
 
         private void SetLastId()
