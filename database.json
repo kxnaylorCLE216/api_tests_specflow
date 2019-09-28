@@ -41,20 +41,36 @@
       "id": 5
     },
     {
-      "name": "RockDove",
-      "cost": "19.99",
-      "quantity": 1000,
-      "locationId": 3,
-      "groupId": 1,
-      "id": 6
-    },
-    {
-      "id": 7,
+      "id": 6,
       "name": "5 Pack Charcoal Toothbrush",
       "cost": 5.99,
       "quantity": 300,
       "locationId": 2,
       "groupId": 2
+    },
+    {
+      "name": "RockDove",
+      "cost": "19.99",
+      "quantity": 1000,
+      "locationId": 3,
+      "groupId": 1,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "name": "5 Pack Charcoal Toothbrush",
+      "cost": 5.99,
+      "quantity": 300,
+      "locationId": 2,
+      "groupId": 2
+    },
+    {
+      "name": "RockDove",
+      "cost": "19.99",
+      "quantity": 1000,
+      "locationId": 3,
+      "groupId": 1,
+      "id": 9
     }
   ],
   "locations": [

@@ -394,3 +394,9 @@ api_specflow/api_specflow/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cac
 api_specflow/api_specflow/bin/Debug/api_specflow.pdb
 *.tmp
 *.pdb
+*.dll
+*.tmp
+*.pdb
+*.dll
+*.ide
+api_specflow/.vs/api_specflow/v16/.suo

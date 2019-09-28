@@ -10,11 +10,18 @@ namespace api_specflow
     [TestFixture]
     public class UnitTest1
     {
+        private RestClient client;
+        private int id;
+
+        [SetUp]
+        public void setUp()
+        {
+            client = new RestClient("http://localhost:3000/");
+        }
+
         [Test]
         public void GetTheFirstProduct()
         {
-            var client = new RestClient("http://localhost:3000/");
-
             var request = new RestRequest("products/{productid}", Method.GET);
             request.AddUrlSegment("productid", 1);
 
@@ -29,11 +36,10 @@ namespace api_specflow
         [Test]
         public void PostWithAnoymousBody()
         {
-            var client = new RestClient("http://localhost:3000/");
-
             var request = new RestRequest("products", Method.POST);
 
-            request.AddJsonBody(new { name = "RockDove", cost = "19.99", quantity = 1000, locationId = 3, groupId = 1 });
+            request.AddJsonBody(new { name = "RockDove", cost = "19.99", 
+                quantity = 1000, locationId = 3, groupId = 1 });
 
             var response = client.Execute(request);
 
@@ -47,11 +53,20 @@ namespace api_specflow
         [Test]
         public void PostWihClassBody()
         {
-            var client = new RestClient("http://localhost:3000/");
-
+            SetLastId();
             var request = new RestRequest("products", Method.POST);
 
-            request.AddJsonBody(new Products() { id = 7, name = "5 Pack Charcoal Toothbrush", cost = 5.99, quantity = 300, locationId = 2, groupId = 2 });
+            Products products = new Products()
+            {
+                id = id,
+                name = "5 Pack Charcoal Toothbrush",
+                cost = 5.99,
+                quantity = 300,
+                locationId = 2,
+                groupId = 2
+            };
+
+            request.AddJsonBody(products);
 
             var response = client.Execute(request);
 
@@ -60,6 +75,17 @@ namespace api_specflow
             var result = output["cost"];
 
             Assert.That(result, Is.EqualTo("5.99"), "The Cost is not correct");
+        }
+
+        private void SetLastId()
+        {
+            var request = new RestRequest("products", Method.GET);
+
+            var response = client.Execute(request);
+
+            var deserialize = new JsonDeserializer();
+            
+            id = deserialize.Deserialize<List<Products>>(response).Count + 1;
         }
     }
 }
