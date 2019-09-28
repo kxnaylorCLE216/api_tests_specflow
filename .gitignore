@@ -389,3 +389,8 @@ api_specflow/.vs/api_specflow/v16/Server/sqlite3/storage.ide
 api_specflow/api_specflow/bin/Debug/api_specflow.pdb
 *.pdb
 api_specflow/api_specflow/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.suo
+*.dll
+api_specflow/api_specflow/bin/Debug/api_specflow.pdb
+*.tmp
+*.pdb
