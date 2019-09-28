@@ -23,8 +23,30 @@ namespace api_specflow
 
             var name = output["name"];
 
+            Assert.That(name,
+                Is.EqualTo("Dyson Ball Animal Upright Vacuum"), "That is the wrong name");
+
+        }
+
+
+        [Test]
+        public void PostWithAnoymousBody()
+        {
+            var client = new RestClient("http://localhost:3000/");
+
+            var request = new RestRequest("products/{productid}", Method.GET);
+            request.AddUrlSegment("productid", 1);
+
+            var response = client.Execute(request);
+
+            var deserialize = new JsonDeserializer();
+            var output = deserialize.Deserialize<Dictionary<string, string>>(response);
+
+            var name = output["name"];
+
             Assert.That(name, 
-                Is.EqualTo("Dyson Ball Animal Upright Vacuum , Purple (Renewed)"), "That is the wrong name");
+                Is.EqualTo("Dyson Ball Animal Upright Vacuum"), "That is the wrong name");
+
         }
     }
 }

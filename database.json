@@ -2,38 +2,46 @@
   "products": [
     {
       "id": 1,
-      "name": "Dyson Ball Animal Upright Vacuum , Purple (Renewed)",
+      "name": "Dyson Ball Animal Upright Vacuum",
       "cost": 184.99,
       "quantity": 1000,
-      "locationId" : 1,
-      "groupId" : 1
+      "locationId": 1,
+      "groupId": 1
     },
     {
       "id": 2,
       "name": "Moto Z3 Play with Alexa Hands-Free – 64 GB – Unlocked (AT&T/Sprint/T-Mobile/Verizon) – Deep Indigo – Prime Exclusive Phone",
       "cost": 259.99,
       "quantity": 2000,
-      "locationId" : 1,
-      "groupId" : 2
-    },   
+      "locationId": 1,
+      "groupId": 2
+    },
     {
       "id": 3,
       "name": "Thin Air (Jessica Shaw Book 1)",
       "cost": 1.99,
       "quantity": 3000,
-      "locationId" : 3,
-      "groupId" : 2     
+      "locationId": 3,
+      "groupId": 2
     },
     {
       "id": 4,
       "name": "Starbucks Doubleshot, Espresso + Cream, 6.5 Fluid Ounce, Pack of 12",
       "cost": 12.78,
       "quantity": 4000,
-      "locationId" : 2,
-      "groupId" : 3
+      "locationId": 2,
+      "groupId": 3
+    },
+    {
+      "name": "Echo Wall Clock - see timers at a glance",
+      "cost": 12.78,
+      "quantity": 4000,
+      "locationId": 2,
+      "groupId": 3,
+      "id": 5
     }
   ],
-  "locations":[
+  "locations": [
     {
       "id": 1,
       "name": "Location001"
@@ -47,7 +55,7 @@
       "name": "Location003"
     }
   ],
-  "groups":[
+  "groups": [
     {
       "id": 1,
       "name": "G001"
@@ -61,24 +69,24 @@
       "name": "G003"
     }
   ],
-  "transactions":[
+  "transactions": [
     {
       "id": 1,
-      "cost":11,
-      "quantity":10,
-      "productId":1
+      "cost": 11,
+      "quantity": 10,
+      "productId": 1
     },
     {
       "id": 2,
-      "cost":12,
-      "quantity":100,
-      "productId":2
-    },    
+      "cost": 12,
+      "quantity": 100,
+      "productId": 2
+    },
     {
       "id": 3,
-      "cost":15,
-      "quantity":101,
-      "productId":3
-    }  
+      "cost": 15,
+      "quantity": 101,
+      "productId": 3
+    }
   ]
 }
