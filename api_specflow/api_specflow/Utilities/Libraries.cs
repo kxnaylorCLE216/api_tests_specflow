@@ -9,7 +9,7 @@ namespace api_specflow.Utilities
 {
     public static class Libraries
     {
-        public static string GetRespnseObhect(this IRestResponse response, string responseOject)
+        public static string GetResponseObject(this IRestResponse response, string responseOject)
         {
             JObject obs = JObject.Parse(response.Content);
             return obs[responseOject].ToString();
@@ -19,6 +19,13 @@ namespace api_specflow.Utilities
         {
             var deserialize = new JsonDeserializer();
             return deserialize.Deserialize<Dictionary<string, string>>(restResponse);
+        }
+
+        public static int getLastID<T>(this IRestResponse restResponse)
+        {
+            var deserialize = new JsonDeserializer();
+
+            return deserialize.Deserialize<List<T>>(restResponse).Count + 1;
         }
 
         public static async Task<IRestResponse<T>> ExecuteAsyncRequest<T>(this RestClient client, IRestRequest request) where T : class, new()

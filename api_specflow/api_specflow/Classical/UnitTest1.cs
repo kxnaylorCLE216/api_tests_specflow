@@ -2,8 +2,6 @@
 using api_specflow.Utilities;
 using NUnit.Framework;
 using RestSharp;
-using RestSharp.Serialization.Json;
-using System.Collections.Generic;
 
 namespace api_specflow
 {
@@ -27,7 +25,7 @@ namespace api_specflow
 
             var response = client.Execute(request);
 
-            string name = response.GetRespnseObhect("name");
+            string name = response.GetResponseObject("name");
 
             Assert.That(name, Is.EqualTo("Dyson Ball Animal Upright Vacuum"), "That is the wrong name");
         }
@@ -107,9 +105,7 @@ namespace api_specflow
 
             var response = client.Execute(request);
 
-            var deserialize = new JsonDeserializer();
-
-            id = deserialize.Deserialize<List<Products>>(response).Count + 1;
+            id = response.getLastID<Products>();
         }
     }
 }
