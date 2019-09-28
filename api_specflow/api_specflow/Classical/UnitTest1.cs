@@ -3,7 +3,9 @@ using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using RestSharp;
 using RestSharp.Serialization.Json;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace api_specflow
 {
@@ -38,8 +40,14 @@ namespace api_specflow
         {
             var request = new RestRequest("products", Method.POST);
 
-            request.AddJsonBody(new { name = "RockDove", cost = "19.99", 
-                quantity = 1000, locationId = 3, groupId = 1 });
+            request.AddJsonBody(new
+            {
+                name = "RockDove",
+                cost = "19.99",
+                quantity = 1000,
+                locationId = 3,
+                groupId = 1
+            });
 
             var response = client.Execute(request);
 
@@ -54,6 +62,7 @@ namespace api_specflow
         public void PostWihClassBody()
         {
             SetLastId();
+
             var request = new RestRequest("products", Method.POST);
 
             Products products = new Products()
@@ -68,13 +77,51 @@ namespace api_specflow
 
             request.AddJsonBody(products);
 
-            var response = client.Execute(request);
+            Products newProduct = client.Execute<Products>(request).Data;
 
-            var deserialize = new JsonDeserializer();
-            var output = deserialize.Deserialize<Dictionary<string, string>>(response);
-            var result = output["cost"];
+            Assert.That(newProduct.cost, Is.EqualTo(5.99), "The Cost is not correct");
+        }
 
-            Assert.That(result, Is.EqualTo("5.99"), "The Cost is not correct");
+        [Test]
+        public void PostWihAsync()
+        {
+            SetLastId();
+
+            var request = new RestRequest("products", Method.POST);
+
+            Products products = new Products()
+            {
+                id = id,
+                name = "Lisianthus Women Belt Buckle Fedora Hat",
+                cost = 16.45,
+                quantity = 300,
+                locationId = 1,
+                groupId = 1
+            };
+
+            request.AddJsonBody(products);
+
+            var result = ExecuteAsyncRequest<Products>(client, request).GetAwaiter().GetResult();
+
+            Assert.That(result.Data.cost, Is.EqualTo(16.45), "The Cost is not correct");
+        }
+
+        private async Task<IRestResponse<T>> ExecuteAsyncRequest<T>(RestClient client, IRestRequest request) where T : class, new()
+        {
+            var taskCompletionSource = new TaskCompletionSource<IRestResponse<T>>();
+
+            client.ExecuteAsync<T>(request, restResponse =>
+            {
+                if (restResponse.ErrorException != null)
+                {
+                    const string message = "Error retrieving response.";
+                    throw new ApplicationException(message, restResponse.ErrorException);
+                }
+
+                taskCompletionSource.SetResult(restResponse);
+            });
+
+            return await taskCompletionSource.Task;
         }
 
         private void SetLastId()
@@ -84,7 +131,7 @@ namespace api_specflow
             var response = client.Execute(request);
 
             var deserialize = new JsonDeserializer();
-            
+
             id = deserialize.Deserialize<List<Products>>(response).Count + 1;
         }
     }
