@@ -42,6 +42,14 @@
     },
     {
       "id": 6,
+      "name": "Lisianthus Women Belt Buckle Fedora Hat",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 7,
       "name": "5 Pack Charcoal Toothbrush",
       "cost": 5.99,
       "quantity": 300,
@@ -54,79 +62,7 @@
       "quantity": 1000,
       "locationId": 3,
       "groupId": 1,
-      "id": 7
-    },
-    {
-      "id": 8,
-      "name": "5 Pack Charcoal Toothbrush",
-      "cost": 5.99,
-      "quantity": 300,
-      "locationId": 2,
-      "groupId": 2
-    },
-    {
-      "name": "RockDove",
-      "cost": "19.99",
-      "quantity": 1000,
-      "locationId": 3,
-      "groupId": 1,
-      "id": 9
-    },
-    {
-      "id": 10,
-      "name": "5 Pack Charcoal Toothbrush",
-      "cost": 5.99,
-      "quantity": 300,
-      "locationId": 2,
-      "groupId": 2
-    },
-    {
-      "id": 11,
-      "name": "5 Pack Charcoal Toothbrush",
-      "cost": 5.99,
-      "quantity": 300,
-      "locationId": 2,
-      "groupId": 2
-    },
-    {
-      "id": 12,
-      "name": "5 Pack Charcoal Toothbrush",
-      "cost": 5.99,
-      "quantity": 300,
-      "locationId": 2,
-      "groupId": 2
-    },
-    {
-      "id": 13,
-      "name": "5 Pack Charcoal Toothbrush",
-      "cost": 5.99,
-      "quantity": 300,
-      "locationId": 2,
-      "groupId": 2
-    },
-    {
-      "id": 14,
-      "name": "5 Pack Charcoal Toothbrush",
-      "cost": 5.99,
-      "quantity": 300,
-      "locationId": 2,
-      "groupId": 2
-    },
-    {
-      "id": 15,
-      "name": "5 Pack Charcoal Toothbrush",
-      "cost": 5.99,
-      "quantity": 300,
-      "locationId": 2,
-      "groupId": 2
-    },
-    {
-      "name": "RockDove",
-      "cost": "19.99",
-      "quantity": 1000,
-      "locationId": 3,
-      "groupId": 1,
-      "id": 16
+      "id": 8
     }
   ],
   "locations": [
