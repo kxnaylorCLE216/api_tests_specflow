@@ -99,6 +99,30 @@ namespace api_specflow
             Assert.That(result.Data.cost, Is.EqualTo(16.45), "The Cost is not correct");
         }
 
+        [Test]
+        public void PostWihBuiltInAsync()
+        {
+            SetLastId();
+
+            var request = new RestRequest("products", Method.POST);
+
+            Products products = new Products()
+            {
+                id = id,
+                name = "Spooktacular Creations Butterfly Wing Cape Shawl Adult Women Halloween Costume",
+                cost = 16.45,
+                quantity = 300,
+                locationId = 1,
+                groupId = 1
+            };
+
+            request.AddJsonBody(products);
+
+            var result = client.ExecutePostTaskAsync<Products>(request).GetAwaiter().GetResult();
+
+            Assert.That(result.Data.cost, Is.EqualTo(16.45), "The Cost is not correct");
+        }
+
         private void SetLastId()
         {
             var request = new RestRequest("products", Method.GET);

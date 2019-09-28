@@ -35,3 +35,4 @@ C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Deb
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.csproj.CopyComplete
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.dll
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.pdb
+C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.csprojAssemblyReference.cache

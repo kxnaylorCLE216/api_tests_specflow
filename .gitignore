@@ -413,3 +413,9 @@ api_specflow/api_specflow/bin/Debug/api_specflow.dll
 *.dll
 *.ide
 *.dll
+api_specflow/.vs/api_specflow/v16/.suo
+*.dll
+*.pdb
+*.tmp
+*.dll
+*.pdb
