@@ -2,6 +2,7 @@
 using api_specflow.Utilities;
 using NUnit.Framework;
 using RestSharp;
+using System.Configuration;
 
 namespace api_specflow
 {
@@ -14,7 +15,7 @@ namespace api_specflow
         [SetUp]
         public void setUp()
         {
-            client = new RestClient("http://localhost:3000/");
+            client = new RestClient(ConfigurationManager.AppSettings["baseUrl"].ToString());
         }
 
         [Test]
