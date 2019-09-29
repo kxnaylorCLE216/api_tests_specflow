@@ -82,12 +82,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "name",
-                        "cost"});
+                        "subproduct"});
             table1.AddRow(new string[] {
                         "Kraft Easy Mac & Cheese Dinner Cups",
-                        "5.98"});
+                        "1"});
 #line 6
- testRunner.Given("I Perform POST operation for \'products\' with body", ((string)(null)), table1, "Given ");
+ testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table1, "Given ");
 #line 9
  testRunner.Then("I should see the \'name\' as \'Kraft Easy Mac & Cheese Dinner Cups\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
