@@ -39,6 +39,21 @@
       "locationId": 2,
       "groupId": 3,
       "id": 5
+    },
+    {
+      "name": "Kraft Easy Mac & Cheese Dinner Cups",
+      "cost": 5.98,
+      "id": 6
+    },
+    {
+      "name": "Kraft Easy Mac & Cheese Dinner Cups",
+      "cost": 5.98,
+      "id": 7
+    },
+    {
+      "name": "Kraft Easy Mac & Cheese Dinner Cups",
+      "cost": 5.98,
+      "id": 8
     }
   ],
   "locations": [
