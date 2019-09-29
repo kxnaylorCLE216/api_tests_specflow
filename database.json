@@ -71,6 +71,38 @@
       "locationId": 3,
       "groupId": 1,
       "id": 9
+    },
+    {
+      "id": 10,
+      "name": "Lisianthus Women Belt Buckle Fedora Hat",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 11,
+      "name": "Spooktacular Creations Butterfly Wing Cape Shawl Adult Women Halloween Costume",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 12,
+      "name": "5 Pack Charcoal Toothbrush",
+      "cost": 5.99,
+      "quantity": 300,
+      "locationId": 2,
+      "groupId": 2
+    },
+    {
+      "name": "RockDove",
+      "cost": "19.99",
+      "quantity": 1000,
+      "locationId": 3,
+      "groupId": 1,
+      "id": 13
     }
   ],
   "locations": [

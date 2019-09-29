@@ -2,7 +2,6 @@
 using api_specflow.Utilities;
 using NUnit.Framework;
 using RestSharp;
-using System;
 using TechTalk.SpecFlow;
 
 namespace api_specflow
@@ -10,28 +9,29 @@ namespace api_specflow
     [Binding]
     public class GetProductsSteps
     {
-        public RestClient client = new RestClient("http://localhost:3000/");
-        public RestRequest request = new RestRequest();
-        public IRestResponse<Products> response = new RestResponse<Products>();
+        private Settings _settings;
+
+        public GetProductsSteps(Settings settings) => _settings = settings;
 
         [Given(@"I perform GET operation for '(.*)'")]
-        public void GivenIPerformGETOperationFor(string p0)
+        public void GivenIPerformGETOperationFor(string url)
         {
-            request = new RestRequest(p0, Method.GET);
+            _settings.RestClient.BaseUrl = new System.Uri("http://localhost:3000/");
+            _settings.Request = new RestRequest(url, Method.GET);
         }
 
         [Given(@"I perform operation for product (.*)")]
-        public void GivenIPerformOperationForProduct(int p0)
+        public void GivenIPerformOperationForProduct(int id)
         {
-            request.AddUrlSegment("productid", p0);
+            _settings.Request.AddUrlSegment("productid", id.ToString());
 
-            response = client.ExecuteAsyncRequest<Products>(request).GetAwaiter().GetResult();
+            _settings.Response = _settings.RestClient.ExecuteAsyncRequest<Products>(_settings.Request).GetAwaiter().GetResult();
         }
 
         [Then(@"I should see the '(.*)' as '(.*)'")]
-        public void ThenIShouldSeeTheAs(string p0, string p1)
+        public void ThenIShouldSeeTheAs(string key, string pair)
         {
-            Assert.That(response.GetResponseObject(p0), Is.EqualTo(p1), "That is the wrong name");
+            Assert.That(_settings.Response.GetResponseObject(key), Is.EqualTo(pair), "That is the wrong name");
         }
     }
 }

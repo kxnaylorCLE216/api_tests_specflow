@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classical\UnitTest1.cs" />
+    <Compile Include="Base\Settings.cs" />
     <Compile Include="Steps\GetProductsSteps.cs" />
     <Compile Include="Model\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,7 +99,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base\" />
     <Folder Include="Hooks\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
