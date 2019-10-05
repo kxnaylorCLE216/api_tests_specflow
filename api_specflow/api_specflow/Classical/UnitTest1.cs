@@ -2,6 +2,7 @@
 using api_specflow.Utilities;
 using NUnit.Framework;
 using RestSharp;
+using RestSharp.Authenticators;
 using System.Configuration;
 
 namespace api_specflow
@@ -16,6 +17,7 @@ namespace api_specflow
         public void setUp()
         {
             client = new RestClient(ConfigurationManager.AppSettings["baseUrl"].ToString());
+            AuthenticationMechanism();
         }
 
         [Test]
@@ -131,6 +133,25 @@ namespace api_specflow
             var response = client.Execute(request);
 
             id = response.getLastID<Products>();
+        }
+
+        private void AuthenticationMechanism()
+        {
+            var request = new RestRequest("auth/login", Method.POST);
+
+            Auth auth = new Auth()
+            {
+                email = "naylorkx@gmail.com",
+                password = "kxn"
+            };
+
+            request.AddJsonBody(auth);
+
+            var response = client.ExecutePostTaskAsync(request).GetAwaiter().GetResult();
+            var access_token = response.DeserializeResponse()["access_token"];
+
+            var jwtAuth = new JwtAuthenticator(access_token);
+            client.Authenticator = jwtAuth;
         }
     }
 }
