@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "name": "Moto Z3 Play with Alexa Hands-Free – 64 GB – Unlocked (AT&T/Sprint/T-Mobile/Verizon) – Deep Indigo – Prime Exclusive Phone",
+      "name": "Moto Z3 Play with Alexa Hands-Free",
       "cost": 259.99,
       "quantity": 2000,
       "locationId": 1,
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "name": "Thin Air (Jessica Shaw Book 1)",
+      "name": "Thin Air Book",
       "cost": 1.99,
       "quantity": 3000,
       "locationId": 3,
@@ -26,14 +26,14 @@
     },
     {
       "id": 4,
-      "name": "Starbucks Doubleshot, Espresso + Cream, 6.5 Fluid Ounce, Pack of 12",
+      "name": "Starbucks Doubleshot",
       "cost": 12.78,
       "quantity": 4000,
       "locationId": 2,
       "groupId": 3
     },
     {
-      "name": "Echo Wall Clock - see timers at a glance",
+      "name": "Echo Wall Clock",
       "cost": 12.78,
       "quantity": 4000,
       "locationId": 2,
@@ -41,19 +41,36 @@
       "id": 5
     },
     {
-      "name": "Kraft Easy Mac & Cheese Dinner Cups",
-      "cost": 5.98,
-      "id": 6
+      "id": 6,
+      "name": "Lisianthus Women Belt Buckle Fedora Hat",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
     },
     {
-      "name": "Kraft Easy Mac & Cheese Dinner Cups",
-      "cost": 5.98,
-      "id": 7
+      "id": 7,
+      "name": "Spooktacular Creations Butterfly Wing Cape Shawl Adult Women Halloween Costume",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
     },
     {
-      "name": "Kraft Easy Mac & Cheese Dinner Cups",
-      "cost": 5.98,
-      "id": 8
+      "id": 8,
+      "name": "5 Pack Charcoal Toothbrush",
+      "cost": 5.99,
+      "quantity": 300,
+      "locationId": 2,
+      "groupId": 2
+    },
+    {
+      "name": "RockDove",
+      "cost": "19.99",
+      "quantity": 1000,
+      "locationId": 3,
+      "groupId": 1,
+      "id": 9
     }
   ],
   "locations": [
@@ -68,6 +85,21 @@
     {
       "id": 3,
       "name": "Location003"
+    },
+    {
+      "name": "Cleveland",
+      "productId": "1",
+      "id": 4
+    },
+    {
+      "name": "Sam",
+      "productId": "2",
+      "id": 5
+    },
+    {
+      "name": "Billy",
+      "productId": "3",
+      "id": 6
     }
   ],
   "groups": [

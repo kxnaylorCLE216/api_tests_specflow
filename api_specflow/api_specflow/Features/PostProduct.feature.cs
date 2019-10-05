@@ -19,6 +19,7 @@ namespace api_specflow.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("PostProduct")]
+    [NUnit.Framework.CategoryAttribute("smoke")]
     public partial class PostProductFeature
     {
         
@@ -31,7 +32,8 @@ namespace api_specflow.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PostProduct", "\tTest POST operation using Restsharp.net library", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PostProduct", "\tTest POST operation using Restsharp.net library", ProgrammingLanguage.CSharp, new string[] {
+                        "smoke"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,12 +72,10 @@ namespace api_specflow.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify Post operation for Product")]
-        [NUnit.Framework.CategoryAttribute("smoke")]
-        public virtual void VerifyPostOperationForProduct()
+        [NUnit.Framework.DescriptionAttribute("Verify Post operation for Product location 1")]
+        public virtual void VerifyPostOperationForProductLocation1()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Post operation for Product", null, new string[] {
-                        "smoke"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Post operation for Product location 1", null, ((string[])(null)));
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -84,12 +84,58 @@ this.ScenarioInitialize(scenarioInfo);
                         "name",
                         "subproduct"});
             table1.AddRow(new string[] {
-                        "Kraft Easy Mac & Cheese Dinner Cups",
+                        "Cleveland",
                         "1"});
 #line 6
  testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table1, "Given ");
 #line 9
- testRunner.Then("I should see the \'name\' as \'Kraft Easy Mac & Cheese Dinner Cups\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see the \'name\' as \'Cleveland\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify Post operation for Product location 2")]
+        public virtual void VerifyPostOperationForProductLocation2()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Post operation for Product location 2", null, ((string[])(null)));
+#line 11
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "name",
+                        "subproduct"});
+            table2.AddRow(new string[] {
+                        "Sam",
+                        "2"});
+#line 12
+ testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table2, "Given ");
+#line 15
+ testRunner.Then("I should see the \'name\' as \'Sam\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify Post operation for Product location 3")]
+        public virtual void VerifyPostOperationForProductLocation3()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Post operation for Product location 3", null, ((string[])(null)));
+#line 17
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "name",
+                        "subproduct"});
+            table3.AddRow(new string[] {
+                        "Billy",
+                        "3"});
+#line 18
+ testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table3, "Given ");
+#line 21
+ testRunner.Then("I should see the \'name\' as \'Billy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

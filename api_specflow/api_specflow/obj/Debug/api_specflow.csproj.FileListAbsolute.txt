@@ -1,3 +1,4 @@
+C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\nunit.framework.xml
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\NUnit3.TestAdapter.pdb
@@ -25,7 +26,6 @@ C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Deb
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\Google.Protobuf.xml
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\Newtonsoft.Json.xml
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\nunit.framework.pdb
-C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\nunit.framework.xml
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\RestSharp.xml
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\System.Threading.Tasks.Extensions.xml
