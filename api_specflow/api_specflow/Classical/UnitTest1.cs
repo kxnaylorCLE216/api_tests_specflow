@@ -1,9 +1,12 @@
 ﻿using api_specflow.Model;
 using api_specflow.Utilities;
+using Newtonsoft.Json;
 using NUnit.Framework;
 using RestSharp;
 using RestSharp.Authenticators;
+using System;
 using System.Configuration;
+using System.IO;
 
 namespace api_specflow
 {
@@ -17,7 +20,8 @@ namespace api_specflow
         public void setUp()
         {
             client = new RestClient(ConfigurationManager.AppSettings["baseUrl"].ToString());
-            AuthenticationMechanism();
+            // AuthenticationMechanism();
+            AuthenticationMechanismWithFile();
         }
 
         [Test]
@@ -144,6 +148,22 @@ namespace api_specflow
                 email = "naylorkx@gmail.com",
                 password = "kxn"
             };
+
+            request.AddJsonBody(auth);
+
+            var response = client.ExecutePostTaskAsync(request).GetAwaiter().GetResult();
+            var access_token = response.DeserializeResponse()["access_token"];
+
+            var jwtAuth = new JwtAuthenticator(access_token);
+            client.Authenticator = jwtAuth;
+        }
+
+        private void AuthenticationMechanismWithFile()
+        {
+            var request = new RestRequest("auth/login", Method.POST);
+
+            var file = @"TestData\Data.Json";
+            var auth = JsonConvert.DeserializeObject<Auth>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, file).ToString()));
 
             request.AddJsonBody(auth);
 
