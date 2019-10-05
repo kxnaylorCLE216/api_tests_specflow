@@ -8,10 +8,20 @@
 		{
 			"name": "products01",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbHNvbkBlbWFpbC5jb20iLCJwYXNzd29yZCI6Im5pbHNvbiIsImlhdCI6MTU3MDMxMzIyOSwiZXhwIjoxNTcwMzE2ODI5fQ.3dztwMg2F0xz13yLvyivri0twk-NPzoP5vouxlrEXpQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/products?id=5",
+					"raw": "http://localhost:3000/products?id=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -23,7 +33,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "5"
+							"value": "1"
 						}
 					]
 				}
@@ -33,6 +43,16 @@
 		{
 			"name": "products",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbHNvbkBlbWFpbC5jb20iLCJwYXNzd29yZCI6Im5pbHNvbiIsImlhdCI6MTU3MDMxMzIyOSwiZXhwIjoxNTcwMzE2ODI5fQ.3dztwMg2F0xz13yLvyivri0twk-NPzoP5vouxlrEXpQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -52,6 +72,16 @@
 		{
 			"name": "products01 Post",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbHNvbkBlbWFpbC5jb20iLCJwYXNzd29yZCI6Im5pbHNvbiIsImlhdCI6MTU3MDMxMzIyOSwiZXhwIjoxNTcwMzE2ODI5fQ.3dztwMg2F0xz13yLvyivri0twk-NPzoP5vouxlrEXpQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -80,8 +110,48 @@
 			"response": []
 		},
 		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"nilson@email.com\",\r\n  \"password\":\"nilson\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "subProducts01 Post",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbHNvbkBlbWFpbC5jb20iLCJwYXNzd29yZCI6Im5pbHNvbiIsImlhdCI6MTU3MDMxMzIyOSwiZXhwIjoxNTcwMzE2ODI5fQ.3dztwMg2F0xz13yLvyivri0twk-NPzoP5vouxlrEXpQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -95,7 +165,7 @@
 					"raw": "{\r\n      \"name\": \"SP01\"\r\n }"
 				},
 				"url": {
-					"raw": "http://localhost:3000/products/1/subproducts",
+					"raw": "http://localhost:3000/products/1/locations",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -104,7 +174,7 @@
 					"path": [
 						"products",
 						"1",
-						"subproducts"
+						"locations"
 					]
 				}
 			},
