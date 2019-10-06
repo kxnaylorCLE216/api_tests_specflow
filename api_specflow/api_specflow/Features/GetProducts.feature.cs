@@ -69,19 +69,36 @@ namespace api_specflow.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 4
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Email",
+                        "Password"});
+            table1.AddRow(new string[] {
+                        "naylorkx@gmail.com",
+                        "kxn"});
+#line 5
+ testRunner.Given("I get JWT authentication of User with following details", ((string)(null)), table1, "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify author of the product 1")]
         public virtual void VerifyAuthorOfTheProduct1()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify author of the product 1", null, ((string[])(null)));
-#line 4
+#line 9
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 5
+#line 4
+this.FeatureBackground();
+#line 10
  testRunner.Given("I perform GET operation for \'products/{productid}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
+#line 11
  testRunner.And("I perform operation for product 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 7
+#line 12
  testRunner.Then("I should see the \'name\' as \'Dyson Ball Animal Upright Vacuum\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -92,14 +109,16 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void VerifyAuthorOfTheProduct2()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify author of the product 2", null, ((string[])(null)));
-#line 9
+#line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 10
+#line 4
+this.FeatureBackground();
+#line 15
  testRunner.Given("I perform GET operation for \'products/{productid}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
+#line 16
  testRunner.And("I perform operation for product 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
+#line 17
  testRunner.Then("I should see the \'name\' as \'Moto Z3 Play with Alexa Hands-Free\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -110,14 +129,16 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void VerifyAuthorOfTheProduct3()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify author of the product 3", null, ((string[])(null)));
-#line 14
+#line 19
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 15
+#line 4
+this.FeatureBackground();
+#line 20
  testRunner.Given("I perform GET operation for \'products/{productid}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 16
+#line 21
  testRunner.And("I perform operation for product 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 22
  testRunner.Then("I should see the \'name\' as \'Thin Air Book\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -128,14 +149,16 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void VerifyAuthorOfTheProduct4()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify author of the product 4", null, ((string[])(null)));
-#line 19
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 20
+#line 4
+this.FeatureBackground();
+#line 25
  testRunner.Given("I perform GET operation for \'products/{productid}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
+#line 26
  testRunner.And("I perform operation for product 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
+#line 27
  testRunner.Then("I should see the \'name\' as \'Starbucks Doubleshot\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -146,14 +169,16 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void VerifyAuthorOfTheProduct5()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify author of the product 5", null, ((string[])(null)));
-#line 24
+#line 29
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 25
+#line 4
+this.FeatureBackground();
+#line 30
  testRunner.Given("I perform GET operation for \'products/{productid}\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
+#line 31
  testRunner.And("I perform operation for product 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 32
  testRunner.Then("I should see the \'name\' as \'Echo Wall Clock\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

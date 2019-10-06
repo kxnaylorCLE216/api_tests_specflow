@@ -2,6 +2,11 @@
 Feature: PostProduct
 	Test POST operation using Restsharp.net library
 
+Background: 
+	Given I get JWT authentication of User with following details
+	| Email              | Password |
+	| naylorkx@gmail.com | kxn      |
+
 Scenario: Verify Post operation for Product location 1
 	Given I Perform POST operation for 'products/{productid}/locations' with body
 	| name		| subproduct |

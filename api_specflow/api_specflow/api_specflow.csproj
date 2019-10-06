@@ -98,6 +98,7 @@
     <Compile Include="Base\Settings.cs" />
     <Compile Include="Hooks\TestInitialize.cs" />
     <Compile Include="Model\AuthCreds.cs" />
+    <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\PostProductSteps.cs" />
     <Compile Include="Steps\GetProductsSteps.cs" />
     <Compile Include="Model\Products.cs" />

@@ -71,24 +71,41 @@ namespace api_specflow.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 5
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Email",
+                        "Password"});
+            table2.AddRow(new string[] {
+                        "naylorkx@gmail.com",
+                        "kxn"});
+#line 6
+ testRunner.Given("I get JWT authentication of User with following details", ((string)(null)), table2, "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Post operation for Product location 1")]
         public virtual void VerifyPostOperationForProductLocation1()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Post operation for Product location 1", null, ((string[])(null)));
-#line 5
+#line 10
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 5
+this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "name",
                         "subproduct"});
-            table1.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "Cleveland",
                         "1"});
-#line 6
- testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table1, "Given ");
-#line 9
+#line 11
+ testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table3, "Given ");
+#line 14
  testRunner.Then("I should see the \'name\' as \'Cleveland\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -99,19 +116,21 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void VerifyPostOperationForProductLocation2()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Post operation for Product location 2", null, ((string[])(null)));
-#line 11
+#line 16
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 5
+this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "name",
                         "subproduct"});
-            table2.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "Sam",
                         "2"});
-#line 12
- testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table2, "Given ");
-#line 15
+#line 17
+ testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table4, "Given ");
+#line 20
  testRunner.Then("I should see the \'name\' as \'Sam\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -122,19 +141,21 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void VerifyPostOperationForProductLocation3()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Post operation for Product location 3", null, ((string[])(null)));
-#line 17
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 5
+this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "name",
                         "subproduct"});
-            table3.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "Billy",
                         "3"});
-#line 18
- testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table3, "Given ");
-#line 21
+#line 23
+ testRunner.Given("I Perform POST operation for \'products/{productid}/locations\' with body", ((string)(null)), table5, "Given ");
+#line 26
  testRunner.Then("I should see the \'name\' as \'Billy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

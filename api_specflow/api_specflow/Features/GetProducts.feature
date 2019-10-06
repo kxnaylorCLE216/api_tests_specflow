@@ -1,6 +1,11 @@
 ﻿Feature: GetProducts
 	Test GET product operation with Restsharp.net
 
+Background: 
+	Given I get JWT authentication of User with following details
+	| Email              | Password |
+	| naylorkx@gmail.com | kxn      |
+
 Scenario: Verify author of the product 1
 	Given I perform GET operation for 'products/{productid}'
 	And I perform operation for product 1

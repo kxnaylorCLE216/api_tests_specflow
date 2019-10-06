@@ -3,6 +3,7 @@ C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Deb
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\NUnit3.TestAdapter.pdb
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\nunit.engine.dll
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\nunit.engine.api.dll
+C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\TestData\Data.json
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\api_specflow.dll.config
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\api_specflow.dll
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\api_specflow.pdb
@@ -36,5 +37,3 @@ C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Deb
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.csproj.CopyComplete
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.dll
 C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.pdb
-C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\obj\Debug\api_specflow.csprojAssemblyReference.cache
-C:\Users\naylo\source\repos\api_tests_specflow\api_specflow\api_specflow\bin\Debug\TestData\Data.json
