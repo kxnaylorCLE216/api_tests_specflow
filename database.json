@@ -71,6 +71,102 @@
       "locationId": 3,
       "groupId": 1,
       "id": 9
+    },
+    {
+      "name": "Echo Wall Clock - see timers at a glance",
+      "cost": 12.78,
+      "quantity": 4000,
+      "locationId": 2,
+      "groupId": 3,
+      "id": 10
+    },
+    {
+      "name": "Echo Wall Clock - see timers at a glance",
+      "cost": 12.78,
+      "quantity": 4000,
+      "locationId": 2,
+      "groupId": 3,
+      "id": 11
+    },
+    {
+      "name": "Echo Wall Clock - see timers at a glance",
+      "cost": 12.78,
+      "quantity": 4000,
+      "locationId": 2,
+      "groupId": 3,
+      "id": 12
+    },
+    {
+      "id": 13,
+      "name": "Lisianthus Women Belt Buckle Fedora Hat",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 14,
+      "name": "Lisianthus Women Belt Buckle Fedora Hat",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 15,
+      "name": "Spooktacular Creations Butterfly Wing Cape Shawl Adult Women Halloween Costume",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 16,
+      "name": "5 Pack Charcoal Toothbrush",
+      "cost": 5.99,
+      "quantity": 300,
+      "locationId": 2,
+      "groupId": 2
+    },
+    {
+      "name": "RockDove",
+      "cost": "19.99",
+      "quantity": 1000,
+      "locationId": 3,
+      "groupId": 1,
+      "id": 17
+    },
+    {
+      "name": "RockDove",
+      "cost": "19.99",
+      "quantity": 1000,
+      "locationId": 3,
+      "groupId": 1,
+      "id": 18
+    },
+    {
+      "id": 19,
+      "name": "5 Pack Charcoal Toothbrush",
+      "cost": 5.99,
+      "quantity": 300,
+      "locationId": 2,
+      "groupId": 2
+    },
+    {
+      "id": 20,
+      "name": "Lisianthus Women Belt Buckle Fedora Hat",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 21,
+      "name": "Spooktacular Creations Butterfly Wing Cape Shawl Adult Women Halloween Costume",
+      "cost": 16.45,
+      "quantity": 300,
+      "locationId": 1,
+      "groupId": 1
     }
   ],
   "locations": [
@@ -85,6 +181,31 @@
     {
       "id": 3,
       "name": "Location003"
+    },
+    {
+      "name": "SP01",
+      "productId": "1",
+      "id": 4
+    },
+    {
+      "name": "SP01",
+      "productId": "1",
+      "id": 5
+    },
+    {
+      "name": "Cleveland",
+      "productId": "1",
+      "id": 6
+    },
+    {
+      "name": "Sam",
+      "productId": "2",
+      "id": 7
+    },
+    {
+      "name": "Billy",
+      "productId": "3",
+      "id": 8
     }
   ],
   "groups": [
